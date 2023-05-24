@@ -10,8 +10,8 @@
     tools:context=".activity.FindBookActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="389dp"
+        android:layout_height="621dp"
         android:orientation="vertical">
 
 
@@ -24,18 +24,21 @@
 
             android:text="@string/tv_text_find_book_welcome"
             android:textSize="25sp" />
+
         <LinearLayout
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:orientation="horizontal">
+
             <EditText
                 android:id="@+id/et_book_name_search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:ems="10"
                 android:hint="请输入书名"
-                android:ems="10" />
+                android:text="" />
+
             <Button
                 android:id="@+id/btn_search"
                 android:layout_width="wrap_content"
@@ -90,14 +93,21 @@
             android:layout_below="@id/ll_find_book_title"
             android:layout_marginTop="15dp" />
 
-        <Button
-            android:id="@+id/btn_return"
-            android:layout_width="wrap_content"
-            android:layout_height="57dp"
-            android:layout_gravity="center"
-
-            android:text="@string/btn_text_return" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_return"
+        android:layout_width="wrap_content"
+        android:layout_height="57dp"
+        android:layout_alignParentEnd="true"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="9dp"
+        android:text="@string/btn_text_return" />
 
 
 </RelativeLayout>

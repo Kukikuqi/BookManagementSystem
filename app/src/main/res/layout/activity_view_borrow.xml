@@ -57,8 +57,8 @@
 
     <ListView
         android:id="@+id/lv_view_borrow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="537dp"
         android:layout_below="@id/ll_view_borrow_title"
         android:layout_marginTop="15dp" />
 
@@ -66,9 +66,12 @@
         android:id="@+id/btn_return"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="13dp"
         android:text="@string/btn_text_return" />
 
 </RelativeLayout>
