@@ -1,6 +1,10 @@
 package com.stbu.bookmanagementsystem.activity;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.AlertDialog;
 import android.content.Intent;
@@ -11,6 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import com.stbu.bookmanagementsystem.R;
 import com.stbu.bookmanagementsystem.adapter.BookAdapter;
@@ -52,7 +57,14 @@ public class FindBookActivity extends AppCompatActivity {
         initData(books);
         initEvent();
     }
+    public void message() {
+        Notification note = new NotificationCompat.Builder(this, "通知")
+                .setContentTitle("借阅成功")
+                .setContentText("您已成功借阅图书" + bookName)
+                .setSmallIcon(R.drawable.icon)
+                .build();
 
+    }
 
 
     private void initEvent() {

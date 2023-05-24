@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.stbu.bookmanagementsystem">
 
     <application
@@ -62,7 +63,7 @@
         <activity
             android:name="com.stbu.bookmanagementsystem.activity.UpdatePasswordActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
+        <activity android:name=".activity.notice"></activity>
     </application>
 
 </manifest>

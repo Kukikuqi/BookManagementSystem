@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.content.Intent;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,7 +26,8 @@ import com.stbu.bookmanagementsystem.util.db.UserDao;
  */
 public class LoginActivity extends AppCompatActivity {
     private EditText et_account, et_pwd;
-    private Button btn_login, btn_reset;
+    private Button btn_login;
+    private Button btn_reset;
     private RadioButton rb_admin, rb_user;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -42,6 +44,15 @@ public class LoginActivity extends AppCompatActivity {
 
 
 //        et_pwd.setText(sharedPreferences.getString("password"," "));
+            Button button = (Button)findViewById(R.id.btn_text);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //前一个（MainActivity.this）是目前页面，后面一个是要跳转的下一个页面
+                Intent intent = new Intent(LoginActivity.this,notice.class);
+                startActivity(intent);
+            }
+        });
 
 
         initView();
@@ -65,9 +76,11 @@ public class LoginActivity extends AppCompatActivity {
         btn_login = findViewById(R.id.btn_login);
         btn_reset = findViewById(R.id.btn_register);
 
+
     }
 
     private void initEvent() {
+
         btn_login.setOnClickListener(v -> {
             String account = et_account.getText().toString();
             String password = et_pwd.getText().toString();
@@ -103,6 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
 
         // 重置页面
         btn_reset.setOnClickListener(v -> {
