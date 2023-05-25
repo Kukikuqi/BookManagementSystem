@@ -35,20 +35,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // 去掉状态栏, 此段代码应放在关联布局文件代码之前
+        // 去掉状态栏
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
         setContentView(R.layout.activity_login);
-
-
-//        et_pwd.setText(sharedPreferences.getString("password"," "));
             Button button = (Button)findViewById(R.id.btn_text);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //前一个（MainActivity.this）是目前页面，后面一个是要跳转的下一个页面
                 Intent intent = new Intent(LoginActivity.this,notice.class);
                 startActivity(intent);
             }
@@ -116,7 +110,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
 
         // 重置页面
         btn_reset.setOnClickListener(v -> {

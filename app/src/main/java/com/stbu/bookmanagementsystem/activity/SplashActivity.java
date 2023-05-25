@@ -49,10 +49,8 @@ public class SplashActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
-
         new Thread(new TimerThread()).start();
     }
-
     /**
      * 使用 TimerThread 线程类完成启动页面倒计时的
      */
